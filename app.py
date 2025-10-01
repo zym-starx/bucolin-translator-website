@@ -181,12 +181,12 @@ def apply_custom_styles():
     
     .bucolin-brand {
         color: var(--text-primary);
-        font-size: 1.3rem;
+        font-size: 1.9rem;
         font-weight: 700;
         text-align: center;
         margin-bottom: 1.2rem;
         font-family: 'Crimson Text', serif;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         background: linear-gradient(135deg, var(--accent-gold), var(--accent-copper));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
