@@ -1,12 +1,5 @@
 # Environment and secrets
 .env
-.env.local
-.env.production
-
-# Admin configuration
-config.py
-secrets.json
-config/production.py
 
 # API keys and credentials
 *.key
