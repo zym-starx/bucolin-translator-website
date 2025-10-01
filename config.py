@@ -53,6 +53,10 @@ class SecureConfig:
         return get_config("ADMIN_PASSWORD")  # Required, no default
     
     @staticmethod
+    def get_api_key() -> str:
+        return get_config("API_KEY", None)
+    
+    @staticmethod
     def is_development() -> bool:
         return get_config("ENVIRONMENT", "development") == "development"
     
