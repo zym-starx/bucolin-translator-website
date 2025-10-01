@@ -1,0 +1,31 @@
+# Environment and secrets
+.env
+.env.local
+.env.production
+
+# Admin configuration
+config.py
+secrets.json
+config/production.py
+
+# API keys and credentials
+*.key
+*.pem
+credentials/
+
+# Deployment
+.streamlit/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
