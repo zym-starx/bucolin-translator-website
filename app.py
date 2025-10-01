@@ -158,39 +158,63 @@ def apply_custom_styles():
     }
     
     .nav-container {
-        background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
-        backdrop-filter: blur(20px);
-        padding: 1.5rem 2rem;
-        border-radius: 16px;
-        margin-bottom: 2.5rem;
-        border: 1px solid var(--border-subtle);
-        box-shadow: 0 8px 32px var(--shadow-soft);
+        background: linear-gradient(135deg, rgba(37, 43, 58, 0.6) 0%, rgba(26, 31, 46, 0.8) 100%);
+        backdrop-filter: blur(30px);
+        padding: 1rem 2rem;
+        border-radius: 30px;
+        margin-bottom: 2rem;
+        border: 2px solid rgba(212, 175, 55, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
         position: relative;
         overflow: hidden;
     }
-    
+
     .nav-container::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg, var(--accent-gold), var(--accent-copper), var(--accent-emerald));
+        height: 3px;
+        background: linear-gradient(90deg, transparent, var(--accent-gold), var(--accent-copper), var(--accent-emerald), transparent);
+    }
+
+    .nav-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+        border-radius: 50%;
+        transform: translate(50%, -50%);
+        pointer-events: none;
     }
     
     .bucolin-brand {
-        color: var(--text-primary);
-        font-size: 1.9rem;
+        color: var(--accent-gold);
+        font-size: 1.4rem;
         font-weight: 700;
         text-align: center;
-        margin-bottom: 1.2rem;
+        margin-bottom: 1rem;
         font-family: 'Crimson Text', serif;
-        letter-spacing: 2px;
-        background: linear-gradient(135deg, var(--accent-gold), var(--accent-copper));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .bucolin-brand::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
     }
     
     .main-header {
@@ -552,11 +576,11 @@ def navigation_menu():
     query_params = st.query_params
     current_page = query_params.get("page", "demo")
     
-    st.markdown(f'''
-        <div class="nav-container">
-            <div class="bucolin-brand">{PublicConfig.APP_NAME}</div>
-        </div>
-        ''', unsafe_allow_html=True)
+    st.markdown('''
+    <div class="nav-container">
+        <div class="bucolin-brand">BUCOLIN</div>
+    </div>
+    ''', unsafe_allow_html=True)
     
     # Navigation buttons
     col1, col2, col3, col4, col5 = st.columns(5)
