@@ -115,51 +115,51 @@ class TurkishTranslator:
         result["service_used"] = self.service_name
         return result
 
-def get_theme_colors(theme='dark'):
+def get_theme_colors(theme='light'):
     """Get color variables for the selected theme"""
     if theme == 'dark':
         return """
         /* Background Colors */
-        --bg-primary: #0c1220;
-        --bg-secondary: #151b2d;
-        --bg-tertiary: #1f2937;
-        --bg-elevated: #1a2030;
-        --bg-surface: #11171f;
+        --bg-primary: #13151a;
+        --bg-secondary: #1c1f26;
+        --bg-tertiary: #25282f;
+        --bg-elevated: #1f2229;
+        --bg-surface: #171a1f;
         
         /* Accent Colors */
-        --accent-primary: #5eb3d1;
-        --accent-secondary: #4a9ab8;
-        --accent-tertiary: #7bc4de;
-        --accent-muted: #3d8aa8;
-        --accent-medium: #4a9ab8;
-        --accent-hover: #5eb3d1;
+        --accent-primary: #7096b8;
+        --accent-secondary: #5d83a8;
+        --accent-tertiary: #8bacc9;
+        --accent-muted: #4d7093;
+        --accent-medium: #5d83a8;
+        --accent-hover: #7096b8;
         
         /* Text Colors */
-        --text-primary: #ecfeff;
-        --text-secondary: #cffafe;
-        --text-muted: #a5f3fc;
-        --text-accent: #7dd3fc;
-        --text-bright: #ffffff;
-        --text-subtle: #e0f2fe;
+        --text-primary: #e8ecf1;
+        --text-secondary: #b8c1d0;
+        --text-muted: #8a95a8;
+        --text-accent: #8aadcc;
+        --text-bright: #f2f5f9;
+        --text-subtle: #c8d1de;
         
-        /* Border Colors */
-        --border-primary: #2c3e50;
-        --border-secondary: #1f2d3d;
-        --border-accent: #22d3ee;
+        /* Border Colors - Subtle gray-blue */
+        --border-primary: #2d3544;
+        --border-secondary: #232936;
+        --border-accent: #4a7399;
         
         /* Status Colors */
         --status-success: #6ee7b7;
         --status-error: #fca5a5;
         --status-warning: #fcd34d;
-        --status-info: #7dd3fc;
+        --status-info: #6b9bc3;
         
-        /* Interactive Colors */
-        --interactive-primary: #22d3ee;
-        --interactive-primary-hover: #06b6d4;
-        --interactive-primary-active: #0891b2;
-        --interactive-secondary: #7dd3fc;
-        --interactive-secondary-hover: #38bdf8;
-        --interactive-secondary-active: #0ea5e9;
+        /* Interactive Colors - Balanced blue */
+        --interactive-primary: #5685b0;
+        --interactive-primary-hover: #4a7399;
+        --interactive-primary-active: #3d6082;
+        --interactive-secondary: #6b9bc3;
+        --interactive-secondary-hover: #5685b0;
+        --interactive-secondary-active: #4a7399;
         
         /* Shadow Effects */
         --shadow-sm: rgba(0, 0, 0, 0.3);
@@ -167,103 +167,103 @@ def get_theme_colors(theme='dark'):
         --shadow-lg: rgba(0, 0, 0, 0.5);
         --shadow-xl: rgba(0, 0, 0, 0.6);
         
-        /* Overlay Effects */
-        --overlay-primary-xs: rgba(125, 211, 252, 0.05);
-        --overlay-primary-sm: rgba(125, 211, 252, 0.08);
-        --overlay-primary-md: rgba(125, 211, 252, 0.12);
-        --overlay-primary-lg: rgba(125, 211, 252, 0.25);
-        --overlay-primary-xl: rgba(125, 211, 252, 0.35);
-        --overlay-primary-2xl: rgba(125, 211, 252, 0.45);
-        --overlay-secondary-sm: rgba(56, 189, 248, 0.08);
-        --overlay-secondary-lg: rgba(56, 189, 248, 0.3);
-        --overlay-secondary-xl: rgba(56, 189, 248, 0.4);
-        --overlay-tertiary-sm: rgba(165, 243, 252, 0.08);
-        --overlay-tertiary-md: rgba(165, 243, 252, 0.12);
-        --overlay-tertiary-lg: rgba(165, 243, 252, 0.2);
-        --overlay-tertiary-xl: rgba(165, 243, 252, 0.3);
-        --overlay-tertiary-2xl: rgba(165, 243, 252, 0.35);
-        --overlay-tertiary-3xl: rgba(165, 243, 252, 0.45);
-        --overlay-highlight-md: rgba(125, 211, 252, 0.4);
-        --overlay-highlight-lg: rgba(165, 243, 252, 0.5);
+        /* Overlay Effects - Subtle */
+        --overlay-primary-xs: rgba(107, 155, 195, 0.05);
+        --overlay-primary-sm: rgba(107, 155, 195, 0.08);
+        --overlay-primary-md: rgba(107, 155, 195, 0.12);
+        --overlay-primary-lg: rgba(107, 155, 195, 0.22);
+        --overlay-primary-xl: rgba(107, 155, 195, 0.30);
+        --overlay-primary-2xl: rgba(107, 155, 195, 0.38);
+        --overlay-secondary-sm: rgba(86, 133, 176, 0.08);
+        --overlay-secondary-lg: rgba(86, 133, 176, 0.28);
+        --overlay-secondary-xl: rgba(86, 133, 176, 0.35);
+        --overlay-tertiary-sm: rgba(138, 173, 204, 0.08);
+        --overlay-tertiary-md: rgba(138, 173, 204, 0.12);
+        --overlay-tertiary-lg: rgba(138, 173, 204, 0.18);
+        --overlay-tertiary-xl: rgba(138, 173, 204, 0.25);
+        --overlay-tertiary-2xl: rgba(138, 173, 204, 0.30);
+        --overlay-tertiary-3xl: rgba(138, 173, 204, 0.38);
+        --overlay-highlight-md: rgba(107, 155, 195, 0.35);
+        --overlay-highlight-lg: rgba(138, 173, 204, 0.42);
         --overlay-white-sm: rgba(255, 255, 255, 0.08);
         --overlay-white-md: rgba(255, 255, 255, 0.15);
         """
-    else:  # light theme
+    else:  # light theme 
         return """
-        /* Background Colors */
+        /* Background Colors - CLEAN WHITES (keeping what you love!) */
         --bg-primary: #ffffff;
-        --bg-secondary: #ecfeff;
-        --bg-tertiary: #cffafe;
+        --bg-secondary: #fafbfc;
+        --bg-tertiary: #f4f6f8;
         --bg-elevated: #ffffff;
-        --bg-surface: #a5f3fc;
+        --bg-surface: #e8ecf0;
         
-        /* Accent Colors */
-        --accent-primary: #0891b2;
-        --accent-secondary: #0e7490;
-        --accent-tertiary: #06b6d4;
-        --accent-muted: #22d3ee;
-        --accent-medium: #0891b2;
-        --accent-hover: #0e7490;
+        /* Accent Colors - DARK NAVY BLUE */
+        --accent-primary: #1e3a5f;
+        --accent-secondary: #152b47;
+        --accent-tertiary: #2d4f7a;
+        --accent-muted: #4a6f99;
+        --accent-medium: #1e3a5f;
+        --accent-hover: #152b47;
         
-        /* Text Colors */
-        --text-primary: #083344;
-        --text-secondary: #155e75;
-        --text-muted: #0e7490;
-        --text-accent: #0891b2;
-        --text-bright: #042f2e;
-        --text-subtle: #0c4a6e;
+        /* Text Colors - Dark for contrast */
+        --text-primary: #0a1929;
+        --text-secondary: #1e3a5f;
+        --text-muted: #4a6f99;
+        --text-accent: #1e3a5f;
+        --text-bright: #000000;
+        --text-subtle: #2d4f7a;
         
-        /* Border Colors */
-        --border-primary: #a5f3fc;
-        --border-secondary: #cffafe;
-        --border-accent: #22d3ee;
+        /* Border Colors - Light gray */
+        --border-primary: #d1d9e0;
+        --border-secondary: #e8ecf0;
+        --border-accent: #4a6f99;
         
         /* Status Colors */
         --status-success: #10b981;
         --status-error: #ef4444;
         --status-warning: #f59e0b;
-        --status-info: #06b6d4;
+        --status-info: #1e3a5f;
         
-        /* Interactive Colors */
-        --interactive-primary: #0891b2;
-        --interactive-primary-hover: #0e7490;
-        --interactive-primary-active: #155e75;
-        --interactive-secondary: #06b6d4;
-        --interactive-secondary-hover: #0891b2;
-        --interactive-secondary-active: #0e7490;
+        /* Interactive Colors - NAVY */
+        --interactive-primary: #1e3a5f;
+        --interactive-primary-hover: #152b47;
+        --interactive-primary-active: #0d1d31;
+        --interactive-secondary: #2d4f7a;
+        --interactive-secondary-hover: #1e3a5f;
+        --interactive-secondary-active: #152b47;
         
         /* Shadow Effects */
-        --shadow-sm: rgba(8, 51, 68, 0.1);
-        --shadow-md: rgba(8, 51, 68, 0.15);
-        --shadow-lg: rgba(8, 51, 68, 0.2);
-        --shadow-xl: rgba(8, 51, 68, 0.25);
+        --shadow-sm: rgba(10, 25, 41, 0.08);
+        --shadow-md: rgba(10, 25, 41, 0.12);
+        --shadow-lg: rgba(10, 25, 41, 0.16);
+        --shadow-xl: rgba(10, 25, 41, 0.20);
         
-        /* Overlay Effects */
-        --overlay-primary-xs: rgba(8, 145, 178, 0.04);
-        --overlay-primary-sm: rgba(8, 145, 178, 0.06);
-        --overlay-primary-md: rgba(8, 145, 178, 0.10);
-        --overlay-primary-lg: rgba(8, 145, 178, 0.15);
-        --overlay-primary-xl: rgba(8, 145, 178, 0.20);
-        --overlay-primary-2xl: rgba(8, 145, 178, 0.25);
-        --overlay-secondary-sm: rgba(6, 182, 212, 0.08);
-        --overlay-secondary-lg: rgba(6, 182, 212, 0.20);
-        --overlay-secondary-xl: rgba(6, 182, 212, 0.25);
-        --overlay-tertiary-sm: rgba(34, 211, 238, 0.08);
-        --overlay-tertiary-md: rgba(34, 211, 238, 0.12);
-        --overlay-tertiary-lg: rgba(34, 211, 238, 0.16);
-        --overlay-tertiary-xl: rgba(34, 211, 238, 0.20);
-        --overlay-tertiary-2xl: rgba(34, 211, 238, 0.25);
-        --overlay-tertiary-3xl: rgba(34, 211, 238, 0.30);
-        --overlay-highlight-md: rgba(8, 145, 178, 0.20);
-        --overlay-highlight-lg: rgba(6, 182, 212, 0.30);
+        /* Overlay Effects - Navy tints */
+        --overlay-primary-xs: rgba(30, 58, 95, 0.04);
+        --overlay-primary-sm: rgba(30, 58, 95, 0.06);
+        --overlay-primary-md: rgba(30, 58, 95, 0.10);
+        --overlay-primary-lg: rgba(30, 58, 95, 0.15);
+        --overlay-primary-xl: rgba(30, 58, 95, 0.20);
+        --overlay-primary-2xl: rgba(30, 58, 95, 0.25);
+        --overlay-secondary-sm: rgba(45, 79, 122, 0.08);
+        --overlay-secondary-lg: rgba(45, 79, 122, 0.20);
+        --overlay-secondary-xl: rgba(45, 79, 122, 0.25);
+        --overlay-tertiary-sm: rgba(74, 111, 153, 0.08);
+        --overlay-tertiary-md: rgba(74, 111, 153, 0.12);
+        --overlay-tertiary-lg: rgba(74, 111, 153, 0.16);
+        --overlay-tertiary-xl: rgba(74, 111, 153, 0.20);
+        --overlay-tertiary-2xl: rgba(74, 111, 153, 0.25);
+        --overlay-tertiary-3xl: rgba(74, 111, 153, 0.30);
+        --overlay-highlight-md: rgba(30, 58, 95, 0.20);
+        --overlay-highlight-lg: rgba(45, 79, 122, 0.30);
         --overlay-white-sm: rgba(255, 255, 255, 0.6);
         --overlay-white-md: rgba(255, 255, 255, 0.9);
         """
-    
+     
 def apply_custom_styles():
     """Apply beautiful, modern custom CSS styles to the application"""
-    # Get theme from session state (default to dark)
-    theme = st.session_state.get('theme', 'dark')
+    # Get theme from session state (default to LIGHT now)
+    theme = st.session_state.get('theme', 'light')
     theme_colors = get_theme_colors(theme)
     
     st.markdown(f"""
@@ -396,10 +396,7 @@ def apply_custom_styles():
         font-weight: 700;
         font-size: 2.8rem;
         margin: 0;
-        background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: var(--text-primary) !important;
         text-shadow: 0 4px 8px var(--shadow-sm);
     }}
     
@@ -554,7 +551,7 @@ def apply_custom_styles():
     
     .stButton > button {{
         background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%) !important;
-        color: var(--text-primary) !important;
+        color: #ffffff !important;  /* FORCE WHITE for all buttons on gradient backgrounds */
         border: none !important;
         border-radius: 12px !important;
         padding: 1rem 2.5rem !important;
@@ -624,10 +621,10 @@ def apply_custom_styles():
         transition: all 0.3s ease;
     }}
     
-    /* Translate button special styling */
+    /* Translate button / Primary button special styling */
     .stButton[data-testid="baseButton-primary"] > button {{
         background: linear-gradient(135deg, var(--interactive-primary) 0%, var(--interactive-primary-hover) 50%, var(--interactive-primary-active) 100%) !important;
-        color: #ffffff !important;
+        color: #ffffff !important;  /* WHITE text on navy */
         border: none !important;
         border-radius: 12px !important;
         padding: 1rem 2.5rem !important;
@@ -646,6 +643,7 @@ def apply_custom_styles():
         background: linear-gradient(135deg, var(--interactive-secondary) 0%, var(--interactive-secondary-hover) 50%, var(--interactive-secondary-active) 100%) !important;
         transform: translateY(-3px) scale(1.02) !important;
         box-shadow: 0 12px 35px var(--overlay-highlight-lg) !important;
+        color: #ffffff !important;  /* Keep white on hover */
     }}
     
     /* Secondary button styling for navigation */
@@ -707,7 +705,7 @@ def apply_custom_styles():
     /* Link button styling */
     .stLinkButton > a {{
         background: linear-gradient(135deg, var(--accent-tertiary) 0%, var(--accent-primary) 100%) !important;
-        color: var(--text-primary) !important;
+        color: #ffffff !important;
         text-decoration: none !important;
         border-radius: 12px !important;
         padding: 0.8rem 1.5rem !important;
@@ -822,7 +820,7 @@ def apply_custom_styles():
 
 def theme_toggle():
     """Render theme toggle button"""
-    current_theme = st.session_state.get('theme', 'dark')
+    current_theme = st.session_state.get('theme', 'light')
     
     # Create columns for the theme toggle in the navigation
     col1, col2, col3 = st.columns([4, 1, 1])
@@ -886,7 +884,7 @@ def navigation_menu():
     
     # Small theme toggle button on the right
     with col_right:
-        current_theme = st.session_state.get('theme', 'dark')
+        current_theme = st.session_state.get('theme', 'light')
         if current_theme == 'dark':
             if st.button("☀️", use_container_width=True, key="theme_btn", help="Switch to Light Mode"):
                 st.session_state.theme = 'light'
@@ -907,13 +905,11 @@ def main_app():
     st.markdown(f"""
     <div class="main-header">
         <div style="position: relative; z-index: 1;">
-            <h1 style="margin: 0; font-size: 2.8rem; font-weight: 700; font-family: 'Crimson Text', serif; 
-                       background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
-                       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            <h1 style="margin: 0; font-size: 2.8rem; font-weight: 700; font-family: 'Crimson Text', serif;">
                 HISTORICAL TURKISH TRANSLATOR
             </h1>
             <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1rem;">
-                <span style="color: var(--accent-tertiary); font-weight: 600; font-size: 1rem; font-family: 'Inter', sans-serif;">
+                <span style="color: var(--text-secondary); font-weight: 600; font-size: 1rem; font-family: 'Inter', sans-serif;">
                     {PublicConfig.DEFAULT_LANGUAGE_PAIR[0].replace('_', ' ').title()}
                 </span>
                 <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -921,7 +917,7 @@ def main_app():
                     <span style="color: var(--accent-primary); font-size: 1.2rem; font-weight: 700;">⟷</span>
                     <div style="width: 8px; height: 1px; background: var(--accent-primary);"></div>
                 </div>
-                <span style="color: var(--accent-tertiary); font-weight: 600; font-size: 1rem; font-family: 'Inter', sans-serif;">
+                <span style="color: var(--text-secondary); font-weight: 600; font-size: 1rem; font-family: 'Inter', sans-serif;">
                     {PublicConfig.DEFAULT_LANGUAGE_PAIR[1].replace('_', ' ').title()}
                 </span>
             </div>
@@ -1054,10 +1050,7 @@ def main_app():
             st.markdown("""
             <h3 style="color: var(--accent-primary); margin-bottom: 2.5rem; text-align: center; 
                        font-family: 'Crimson Text', serif; text-transform: uppercase; 
-                       letter-spacing: 3px; font-size: 1.6rem; font-weight: 700;
-                       background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
-                       -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
-                       background-clip: text;">
+                       letter-spacing: 3px; font-size: 1.6rem; font-weight: 700;">
                 ✨ Translation Analysis ✨
             </h3>
             """, unsafe_allow_html=True)
@@ -1219,14 +1212,28 @@ def about_page():
         """, unsafe_allow_html=True)
     
     with col2:
+        # Get current theme to conditionally style cards
+        current_theme = st.session_state.get('theme', 'light')
+        
+        if current_theme == 'dark':
+            # Dark mode: Beautiful dark gradient with white text
+            tech_card_style = """background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%); 
+                        color: #ffffff; box-shadow: 0 16px 40px var(--overlay-tertiary-2xl);"""
+            tech_text_color = "#ffffff"
+        else:
+            # Light mode: Lighter blue gradient with dark text
+            tech_card_style = """background: linear-gradient(135deg, #d0e1f0 0%, #c2d7ed 100%); 
+                        color: #0a1929; box-shadow: 0 12px 32px var(--shadow-md); 
+                        border: 1px solid #b5cde6;"""
+            tech_text_color = "#1e3a5f"
+        
         st.markdown(f"""
-        <div style="background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%); 
-                    padding: 2.5rem; border-radius: 16px; color: var(--text-primary); 
-                    box-shadow: 0 16px 40px var(--overlay-tertiary-2xl); position: relative; overflow: hidden;">
+        <div style="{tech_card_style} 
+                    padding: 2.5rem; border-radius: 16px; position: relative; overflow: hidden;">
             <div style="position: absolute; top: -50%; right: -50%; width: 100%; height: 100%; 
                         background: radial-gradient(circle, var(--overlay-white-sm) 0%, transparent 70%); 
                         border-radius: 50%;"></div>
-            <h3 style="color: var(--text-primary); font-size: 1.4rem; margin-bottom: 1.5rem; 
+            <h3 style="color: {tech_text_color}; font-size: 1.4rem; margin-bottom: 1.5rem; 
                        font-family: 'Crimson Text', serif; position: relative; z-index: 1;">⚙️ Technical Specifications</h3>
             <div style="position: relative; z-index: 1;">
                 <div style="margin-bottom: 1rem;">
@@ -1275,10 +1282,7 @@ def about_page():
                     transition: all 0.4s ease; position: relative; overflow: hidden;"
              onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 20px 40px var(--overlay-primary-xl)';"
              onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 12px 32px var(--shadow-md)';">
-            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; 
-                        background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
-                        background-clip: text;">📜</div>
+            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; color: var(--accent-primary);">📜</div>
             <h3 style="color: var(--accent-primary); margin-bottom: 1rem; font-family: 'Crimson Text', serif; font-size: 1.3rem;">Historical Texts</h3>
             <p style="color: var(--text-secondary); line-height: 1.6;">Process manuscripts, documents, and literature from the Ottoman period with unprecedented accuracy and cultural sensitivity.</p>
         </div>
@@ -1293,10 +1297,7 @@ def about_page():
                     transition: all 0.4s ease; position: relative; overflow: hidden;"
              onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 20px 40px var(--overlay-secondary-xl)';"
              onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 12px 32px var(--shadow-md)';">
-            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; 
-                        background: linear-gradient(135deg, var(--accent-tertiary), var(--accent-primary));
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
-                        background-clip: text;">🧠</div>
+            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; color: var(--accent-tertiary);">🧠</div>
             <h3 style="color: var(--accent-tertiary); margin-bottom: 1rem; font-family: 'Crimson Text', serif; font-size: 1.3rem;">AI-Powered</h3>
             <p style="color: var(--text-secondary); line-height: 1.6;">Advanced neural networks specifically trained and fine-tuned for the nuances of historical Turkish language variations.</p>
         </div>
@@ -1311,10 +1312,7 @@ def about_page():
                     transition: all 0.4s ease; position: relative; overflow: hidden;"
              onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 20px 40px var(--overlay-tertiary-2xl)';"
              onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 12px 32px var(--shadow-md)';">
-            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; 
-                        background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
-                        background-clip: text;">🎓</div>
+            <div style="font-size: 3.5rem; margin-bottom: 1.5rem; color: var(--accent-secondary);">🎓</div>
             <h3 style="color: var(--accent-secondary); margin-bottom: 1rem; font-family: 'Crimson Text', serif; font-size: 1.3rem;">Academic Research</h3>
             <p style="color: var(--text-secondary); line-height: 1.6;">Developed by computational linguistics experts at Boğaziçi University with rigorous academic standards and peer review.</p>
         </div>
@@ -1336,10 +1334,10 @@ def research_page():
         with st.container():
             st.markdown("""
             <div style="background: var(--bg-elevated); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent-medium); margin: 1rem 0;">
-                <h3 style="color: var(--text-bright); margin-top: 0;">Translation Model Main Publication</h3>
-                <p style="color: var(--text-accent); margin: 0.5rem 0;"><strong>Authors:</strong> BUCOLIN Research Team</p>
-                <p style="color: var(--text-accent); margin: 0.5rem 0;"><strong>Institution:</strong> Boğaziçi University</p>
-                <p style="color: var(--text-accent); margin: 0.5rem 0;"><strong>Status:</strong> <span style="color: var(--accent-hover);">Work in Progress</span></p>
+                <h3 style="color: var(--text-primary); margin-top: 0;">Translation Model Main Publication</h3>
+                <p style="color: var(--text-secondary); margin: 0.5rem 0;"><strong>Authors:</strong> BUCOLIN Research Team</p>
+                <p style="color: var(--text-secondary); margin: 0.5rem 0;"><strong>Institution:</strong> Boğaziçi University</p>
+                <p style="color: var(--text-secondary); margin: 0.5rem 0;"><strong>Status:</strong> <span style="color: var(--accent-hover);">Work in Progress</span></p>
             </div>
             """, unsafe_allow_html=True)
             
@@ -1351,14 +1349,14 @@ def research_page():
             <div style="background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-muted) 100%); 
                         padding: 2rem; border-radius: 12px; border-left: 4px solid var(--accent-primary); 
                         margin: 1rem 0; box-shadow: 0 8px 24px var(--overlay-tertiary-2xl);">
-                <h3 style="color: var(--text-primary); margin-top: 0; font-size: 1.4rem; font-family: 'Crimson Text', serif; line-height: 1.3;">
+                <h3 style="color: #ffffff; margin-top: 0; font-size: 1.4rem; font-family: 'Crimson Text', serif; line-height: 1.3;">
                     Building Foundations for Natural Language Processing of Historical Turkish: Resources and Models
                 </h3>
                 <div style="margin: 1.5rem 0;">
-                    <p style="color: var(--text-secondary); margin: 0.5rem 0;"><strong>Authors:</strong> Şaziye Betül Özateş, Tarık Emre Tıraş, Ece Elif Adak, Berat Doğan, Fatih Burak Karagöz, Efe Eren Genç, Esma F. Bilgin Taşdemir</p>
-                    <p style="color: var(--text-secondary); margin: 0.5rem 0;"><strong>Institution:</strong> Boğaziçi University</p>
-                    <p style="color: var(--text-secondary); margin: 0.5rem 0;"><strong>Published:</strong> <span style="color: var(--accent-primary);">January 8, 2025</span></p>
-                    <p style="color: var(--text-secondary); margin: 0.5rem 0;"><strong>arXiv ID:</strong> <span style="color: var(--accent-tertiary);">2501.04828</span></p>
+                    <p style="color: #e8ecf1; margin: 0.5rem 0;"><strong>Authors:</strong> Şaziye Betül Özateş, Tarık Emre Tıraş, Ece Elif Adak, Berat Doğan, Fatih Burak Karagöz, Efe Eren Genç, Esma F. Bilgin Taşdemir</p>
+                    <p style="color: #e8ecf1; margin: 0.5rem 0;"><strong>Institution:</strong> Boğaziçi University</p>
+                    <p style="color: #e8ecf1; margin: 0.5rem 0;"><strong>Published:</strong> <span style="color: #ffffff;">January 8, 2025</span></p>
+                    <p style="color: #e8ecf1; margin: 0.5rem 0;"><strong>arXiv ID:</strong> <span style="color: #ffffff;">2501.04828</span></p>
                 </div>
             </div>
             """, unsafe_allow_html=True)
@@ -1406,39 +1404,66 @@ def research_page():
         """, unsafe_allow_html=True)
     
     with col2:
-        st.markdown("""
-        <div style="background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%); 
-                    padding: 2.5rem; border-radius: 16px; color: var(--text-primary); 
-                    box-shadow: 0 16px 40px var(--overlay-tertiary-2xl); position: relative; overflow: hidden; margin-bottom: 2rem;">
+        # Get current theme to conditionally style cards
+        current_theme = st.session_state.get('theme', 'light')
+        
+        if current_theme == 'dark':
+            # Dark mode: Beautiful dark gradients with white text
+            research_card_style = """background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%); 
+                        color: #ffffff; box-shadow: 0 16px 40px var(--overlay-tertiary-2xl);"""
+            research_text_color = "#ffffff"
+            research_secondary_color = "#e8ecf1"
+            
+            dataset_card_style = """background: linear-gradient(135deg, var(--accent-tertiary) 0%, var(--accent-primary) 100%); 
+                        color: #ffffff; box-shadow: 0 16px 40px var(--overlay-secondary-xl);"""
+            dataset_text_color = "#ffffff"
+            dataset_secondary_color = "#e8ecf1"
+        else:
+            # Light mode: Lighter blue gradients with dark text
+            research_card_style = """background: linear-gradient(135deg, #d4e3f0 0%, #c5d9ed 100%); 
+                        color: #0a1929; box-shadow: 0 12px 32px var(--shadow-md); 
+                        border: 1px solid #b8cfe6;"""
+            research_text_color = "#1e3a5f"
+            research_secondary_color = "#2d4f7a"
+            
+            dataset_card_style = """background: linear-gradient(135deg, #dde8f2 0%, #c9daf0 100%); 
+                        color: #0a1929; box-shadow: 0 12px 32px var(--shadow-md); 
+                        border: 1px solid #bdd2ea;"""
+            dataset_text_color = "#1e3a5f"
+            dataset_secondary_color = "#2d4f7a"
+        
+        st.markdown(f"""
+        <div style="{research_card_style} 
+                    padding: 2.5rem; border-radius: 16px; position: relative; overflow: hidden; margin-bottom: 2rem;">
             <div style="position: absolute; top: -50%; right: -50%; width: 100%; height: 100%; 
                         background: radial-gradient(circle, var(--overlay-white-sm) 0%, transparent 70%); 
                         border-radius: 50%;"></div>
-            <h3 style="color: var(--text-primary); font-size: 1.4rem; margin-bottom: 1.5rem; 
+            <h3 style="color: {research_text_color}; font-size: 1.4rem; margin-bottom: 1.5rem; 
                        font-family: 'Crimson Text', serif; position: relative; z-index: 1;">🔬 Research Areas</h3>
             <div style="position: relative; z-index: 1;">
-                <ul style="list-style: none; padding: 0; margin: 0;">
+                <ul style="list-style: none; padding: 0; margin: 0; color: {research_secondary_color};">
                     <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
-                        <span style="color: var(--text-primary); margin-right: 0.5rem;">📚</span>
+                        <span style="color: {research_text_color}; margin-right: 0.5rem;">📚</span>
                         <span>Historical Text Processing</span>
                     </li>
                     <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
-                        <span style="color: var(--text-primary); margin-right: 0.5rem;">🔄</span>
+                        <span style="color: {research_text_color}; margin-right: 0.5rem;">🔄</span>
                         <span>Neural Machine Translation</span>
                     </li>
                     <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
-                        <span style="color: var(--text-primary); margin-right: 0.5rem;">🏷️</span>
+                        <span style="color: {research_text_color}; margin-right: 0.5rem;">🏷️</span>
                         <span>Named Entity Recognition</span>
                     </li>
                     <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
-                        <span style="color: var(--text-primary); margin-right: 0.5rem;">🌳</span>
+                        <span style="color: {research_text_color}; margin-right: 0.5rem;">🌳</span>
                         <span>Dependency Parsing</span>
                     </li>
                     <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
-                        <span style="color: var(--text-primary); margin-right: 0.5rem;">📖</span>
+                        <span style="color: {research_text_color}; margin-right: 0.5rem;">📖</span>
                         <span>Corpus Linguistics</span>
                     </li>
                     <li style="margin-bottom: 0; display: flex; align-items: center;">
-                        <span style="color: var(--text-primary); margin-right: 0.5rem;">🎯</span>
+                        <span style="color: {research_text_color}; margin-right: 0.5rem;">🎯</span>
                         <span>POS Tagging</span>
                     </li>
                 </ul>
@@ -1446,27 +1471,26 @@ def research_page():
         </div>
         """, unsafe_allow_html=True)
         
-        st.markdown("""
-        <div style="background: linear-gradient(135deg, var(--accent-tertiary) 0%, var(--accent-primary) 100%); 
-                    padding: 2.5rem; border-radius: 16px; color: var(--text-primary); 
-                    box-shadow: 0 16px 40px var(--overlay-secondary-xl); position: relative; overflow: hidden;">
+        st.markdown(f"""
+        <div style="{dataset_card_style} 
+                    padding: 2.5rem; border-radius: 16px; position: relative; overflow: hidden;">
             <div style="position: absolute; top: -50%; right: -50%; width: 100%; height: 100%; 
                         background: radial-gradient(circle, var(--overlay-white-sm) 0%, transparent 70%); 
                         border-radius: 50%;"></div>
-            <h3 style="color: var(--text-primary); font-size: 1.4rem; margin-bottom: 1.5rem; 
+            <h3 style="color: {dataset_text_color}; font-size: 1.4rem; margin-bottom: 1.5rem; 
                        font-family: 'Crimson Text', serif; position: relative; z-index: 1;">📊 Datasets & Resources</h3>
             <div style="position: relative; z-index: 1;">
                 <div style="margin-bottom: 1.2rem;">
-                    <h4 style="color: var(--text-primary); margin: 0 0 0.5rem 0; font-size: 1.1rem;">HisTR</h4>
-                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">First NER dataset for historical Turkish (812 sentences, 17th-19th centuries)</p>
+                    <h4 style="color: {dataset_text_color}; margin: 0 0 0.5rem 0; font-size: 1.1rem;">HisTR</h4>
+                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.9; color: {dataset_secondary_color};">First NER dataset for historical Turkish (812 sentences, 17th-19th centuries)</p>
                 </div>
                 <div style="margin-bottom: 1.2rem;">
-                    <h4 style="color: var(--text-primary); margin: 0 0 0.5rem 0; font-size: 1.1rem;">OTA-BOUN</h4>
-                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">First UD treebank for historical Turkish (514 sentences)</p>
+                    <h4 style="color: {dataset_text_color}; margin: 0 0 0.5rem 0; font-size: 1.1rem;">OTA-BOUN</h4>
+                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.9; color: {dataset_secondary_color};">First UD treebank for historical Turkish (514 sentences)</p>
                 </div>
                 <div style="margin-bottom: 0;">
-                    <h4 style="color: var(--text-primary); margin: 0 0 0.5rem 0; font-size: 1.1rem;">OTC</h4>
-                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Ottoman Text Corpus (15th-20th centuries)</p>
+                    <h4 style="color: {dataset_text_color}; margin: 0 0 0.5rem 0; font-size: 1.1rem;">OTC</h4>
+                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.9; color: {dataset_secondary_color};">Ottoman Text Corpus (15th-20th centuries)</p>
                 </div>
             </div>
         </div>
@@ -1651,9 +1675,9 @@ def main():
         initial_sidebar_state="collapsed"
     )
     
-    # Initialize theme in session state if not present
+    # Initialize theme in session state if not present - DEFAULT TO LIGHT NOW!
     if 'theme' not in st.session_state:
-        st.session_state.theme = 'dark'
+        st.session_state.theme = 'light'
     
     # Check URL parameters for admin access
     query_params = st.query_params
