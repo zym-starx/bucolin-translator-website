@@ -750,6 +750,73 @@ def apply_custom_styles():
     ::-webkit-scrollbar-thumb:hover {{
         background: linear-gradient(135deg, var(--accent-tertiary), var(--accent-secondary));
     }}
+
+    /* Responsive Navigation for Small Screens */
+    @media (max-width: 1200px) {{
+        .stButton > button,
+        .stButton[data-testid="baseButton-secondary"] > button,
+        .stButton[data-testid="baseButton-primary"] > button {{
+            font-size: 0.9rem !important;
+            letter-spacing: 1px !important;
+            padding: 0.8rem 1.5rem !important;
+        }}
+    }}
+
+    @media (max-width: 992px) {{
+        .stButton > button,
+        .stButton[data-testid="baseButton-secondary"] > button,
+        .stButton[data-testid="baseButton-primary"] > button {{
+            font-size: 0.85rem !important;
+            letter-spacing: 0.5px !important;
+            padding: 0.7rem 1rem !important;
+        }}
+        
+        .bucolin-brand {{
+            font-size: 1.2rem !important;
+            letter-spacing: 3px !important;
+        }}
+    }}
+
+    @media (max-width: 768px) {{
+        .stButton > button,
+        .stButton[data-testid="baseButton-secondary"] > button,
+        .stButton[data-testid="baseButton-primary"] > button {{
+            font-size: 0.75rem !important;
+            letter-spacing: 0px !important;
+            padding: 0.6rem 0.8rem !important;
+            text-transform: none !important;
+        }}
+        
+        .bucolin-brand {{
+            font-size: 1rem !important;
+            letter-spacing: 2px !important;
+            margin-bottom: 0.5rem !important;
+        }}
+        
+        .nav-container {{
+            padding: 0.8rem 1rem !important;
+        }}
+    }}
+
+    @media (max-width: 576px) {{
+        /* Hide decorative icon on very small screens */
+        [data-testid="column"]:first-child {{
+            display: none !important;
+        }}
+        
+        .stButton > button,
+        .stButton[data-testid="baseButton-secondary"] > button,
+        .stButton[data-testid="baseButton-primary"] > button {{
+            font-size: 0.7rem !important;
+            padding: 0.5rem 0.6rem !important;
+        }}
+        
+        .stLinkButton > a {{
+            font-size: 0.7rem !important;
+            padding: 0.5rem 0.6rem !important;
+        }}
+    }}
+
     </style>
     """, unsafe_allow_html=True)
 
